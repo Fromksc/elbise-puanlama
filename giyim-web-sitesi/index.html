@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elbise Puanlama</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <section id="login-page" class="login-section">
+        <h2>Kullanıcı Girişi</h2>
+        <form id="login-form">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        <p id="login-error" style="color: rgb(45, 2, 36); display: none;">Yanlış kullanıcı adı veya şifre!</p>
+    </section>
+
+    
+    <section id="main-page" class="main-page" style="display: none;">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <h1>Moda Dünyası</h1>
+            </div>
+            <div class="navbar-links">
+                <a href="#" onclick="scrollToTop()">Ana Sayfa</a>
+                <a href="#" onclick="logout()">Çıkış Yap</a>
+            </div>
+        </nav>
+
+        <div class="products-container">
+         
+            <div class="product">
+                <h2>Elbise 1</h2>
+                <img src="img/dress1.jpg" alt="Elbise 1" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-1">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-1"></textarea>
+                <button onclick="submitReview(1)">Yorumu Gönder</button>
+            </div>
+
+            <div class="product">
+                <h2>Elbise 2</h2>
+                <img src="img/dress2.jpg" alt="Elbise 2" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-2">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-2"></textarea>
+                <button onclick="submitReview(2)">Yorumu Gönder</button>
+            </div>
+
+            <div class="product">
+                <h2>Elbise 3</h2>
+                <img src="img/dress1.jpg" alt="Elbise 3" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-3">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-3"></textarea>
+                <button onclick="submitReview(3)">Yorumu Gönder</button>
+            </div>
+
+            <div class="product">
+                <h2>Elbise 4</h2>
+                <img src="img/dress2.jpg" alt="Elbise 4" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-4">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-4"></textarea>
+                <button onclick="submitReview(4)">Yorumu Gönder</button>
+            </div>
+
+            <div class="product">
+                <h2>Elbise 5</h2>
+                <img src="img/dress1.jpg" alt="Elbise 5" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-5">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-5"></textarea>
+                <button onclick="submitReview(5)">Yorumu Gönder</button>
+            </div>
+
+            <div class="product">
+                <h2>Elbise 6</h2>
+                <img src="img/dress2.jpg" alt="Elbise 6" class="product-img">
+                <p>Puana verin (1-5): 
+                    <input type="number" min="1" max="5" id="rating-6">
+                </p>
+                <textarea placeholder="Yorum yapın..." id="comment-6"></textarea>
+                <button onclick="submitReview(6)">Yorumu Gönder</button>
+            </div>
+        </div>
+
+        <div id="ratings-summary" class="ratings-summary">
+            <h3>Puanlar:</h3>
+            <div id="ratings-list">
+            
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
